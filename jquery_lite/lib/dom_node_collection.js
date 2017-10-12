@@ -50,8 +50,26 @@ DOMNodeCollection.prototype.removeClass = function (name) {
 };
 
 DOMNodeCollection.prototype.children = function () {
+  const array = [];
   this.arr.forEach(function (node) {
-    node.children;
+    array.push(node.children);
   });
+  return array;
+};
+
+DOMNodeCollection.prototype.parent = function () {
+  const array = [];
+  this.arr.forEach(function (node) {
+    array.push(node.parentNode);
+  });
+  return array;
+};
+
+DOMNodeCollection.prototype.find = function (descendant) { //what gets passed in?
+  const result = [];
+  this.arr.forEach(function (node) {
+    result.push(node.querySelectorAll(descendant));
+  });
+  return result;
 };
 module.exports = DOMNodeCollection;
