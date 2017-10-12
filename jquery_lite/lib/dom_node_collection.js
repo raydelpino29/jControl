@@ -22,9 +22,17 @@ DOMNodeCollection.prototype.append = function (content) {
   this.arr.forEach(function(el) {
     el.innerHTML += content;
   });
-  // if (typeof content === "string") {
-  //   const element = document.createElement(content);
-  // } else if ()
+};
+
+DOMNodeCollection.prototype.attr = function (content, value = null) {
+  if (value === null) {
+    return this.arr[0].getAttribute(content);
+  } else {
+    this.arr.forEach((node) => {
+      node.setAttribute(content, value);
+      return this.arr; // why is this not returning?
+    });
+  }
 };
 
 module.exports = DOMNodeCollection;
