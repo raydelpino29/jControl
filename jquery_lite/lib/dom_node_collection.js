@@ -29,10 +29,29 @@ DOMNodeCollection.prototype.attr = function (content, value = null) {
     return this.arr[0].getAttribute(content);
   } else {
     this.arr.forEach((node) => {
-      node.setAttribute(content, value);
-      return this.arr; // why is this not returning?
+      node.setAttribute(content, value); // why is this not returning
     });
+    return this;
   }
 };
 
+DOMNodeCollection.prototype.addClass = function (name) {
+  this.arr.forEach(function (node) {
+    node.setAttribute("class", name);
+  });
+  return this.arr;
+};
+
+DOMNodeCollection.prototype.removeClass = function (name) {
+  this.arr.forEach(function (node) {
+    node.setAttribute("class", "");
+  });
+  return this.arr;
+};
+
+DOMNodeCollection.prototype.children = function () {
+  this.arr.forEach(function (node) {
+    node.children;
+  });
+};
 module.exports = DOMNodeCollection;
