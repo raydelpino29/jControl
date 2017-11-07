@@ -1,0 +1,9 @@
+{
+  "name": "jControl",
+  "version": "1.0.0",
+  "description": "A clone of jQuery!",
+  "main": "main.js",
+  "dependencies": {
+    "webpack": "^3.4.1"
+  }
+}
