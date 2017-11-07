@@ -72,4 +72,37 @@ DOMNodeCollection.prototype.find = function (descendant) { //what gets passed in
   });
   return result;
 };
+
+DOMNodeCollection.prototype.remove = function () {
+  this.arr.forEach(function (node) {
+    node.remove();
+  });
+};
+
+DOMNodeCollection.prototype.on = function (event, callback) {
+  this.arr.forEach(function (node) {
+    node.addEventListener(event, callback);
+    node[event] = callback;
+  });
+};
+
+DOMNodeCollection.prototype.off = function (event) {
+  this.arr.forEach(function (node) {
+    node.removeEventListener(event, node[event]);
+    node[event] = undefined;
+  });
+};
+
 module.exports = DOMNodeCollection;
+
+
+
+
+
+
+
+
+
+
+
+//end of document
