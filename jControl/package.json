@@ -7,6 +7,6 @@
     "webpack": "^3.4.1"
   },
   "scripts": {
-    "run": "webpack --watch ./lib/main.js ./lib/bundle.js"
+    "webpack": "webpack --watch ./lib/main.js ./lib/bundle.js"
   }
 }
