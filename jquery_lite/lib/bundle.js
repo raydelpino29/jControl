@@ -115,18 +115,20 @@ $l.ajax = function (options) {
     data: {},
     contentType: ""
   };
-  const args = Object.assign({}, defaults, options);
-  const xhr = new XMLHttpRequest();
-  xhr.open(args.method, args.url);
-  xhr.onload = function() {
-      if (xhr.status == 200) {
-        args.success(xhr.response);
-      }
-      else {
-         args.error(xhr.response);
-      }
-   };
-   xhr.send();
+  const promise = new Promise(function (resolve, reject) {
+    const args = Object.assign({}, defaults, options);
+     const success = args.success;
+     const error = args.error;
+    const xhr = new XMLHttpRequest();
+    xhr.open(args.method, args.url);
+    xhr.onload = function() {
+      resolve(xhr.responseText);
+    };
+    xhr.error = function(){
+      reject(xhr.statusText);
+    };
+    xhr.send(JSON.stringify(args.data));
+  }).then(success, error);
 };
 
 
