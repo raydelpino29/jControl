@@ -5,6 +5,7 @@ window.$l = function (selector) {
   const elementsArray = [];
   if (selector instanceof HTMLElement) {
     elementsArray.push(selector);
+    debugger
     return new DOMNodeCollection(elementsArray);
   } else if (typeof selector === 'string' ){
       const nodeList = document.querySelectorAll(selector);
@@ -53,11 +54,11 @@ $l.ajax = function (options) {
     const xhr = new XMLHttpRequest();
     xhr.open(args.method, args.url);
     xhr.onload = function() {
-      resolve(xhr.responseText);
+      args.success(xhr.responseText);
     };
     xhr.error = function(){
-      reject(xhr.statusText);
+      args.error(xhr.statusText);
     };
     xhr.send(JSON.stringify(args.data));
-  }).then(success, error);
+  });
 };
