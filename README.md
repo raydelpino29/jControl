@@ -51,7 +51,7 @@ Here are 3 examples, demonstrating all 3 types of arguments $l() accepts:
 
 2.) Passing $l() a CSS Selector:
 
-Let's say you have this <div> on your page...
+Let's say you have this div on your page...
 ```HTML
 <div class="div-class">Our example div.</div>
 ```
@@ -102,7 +102,7 @@ This function will remove the selected element/s:
 ### attr(HTML attribute)/attr(HTML attribute, value)
 This function can either return the value of the passed attribute, or set the value of the given attribute for the first of the selected elements:
 
-Let's say you have this <div> on your page...
+Let's say you have this div on your page...
 ```HTML
 <div class="div-class">Our example div.</div>
 ```
@@ -121,7 +121,7 @@ Let's say you have this <div> on your page...
 ### children()
 This function returns an array of all children elements for the selected element/s:
 
-Let's say you have 2 <div>'s on your page...
+Let's say you have 2 div's on your page...
 ```HTML
 <div class="div-class1">
   <ul>
@@ -146,7 +146,7 @@ Let's say you have 2 <div>'s on your page...
 ### empty()
 This function removes all the child elements from the selected element/s:
 
-Let's say you have this <div> on your page...
+Let's say you have this div on your page...
 ```HTML
 <div class="div-class1">
   <ul>
@@ -168,7 +168,7 @@ Let's say you have this <div> on your page...
 ### find(HTML Element/CSS Selector)
 This function returns all the descendants of the selected HTML element/s that have the given arguments as descendants:
 
-Let's say you have this <div> on your page...
+Let's say you have this div on your page...
 ```HTML
 <div class="div-class1">
   <ul>
@@ -184,7 +184,7 @@ Let's say you have this <div> on your page...
 ### html()/html(HTMLElement)
 This function will either return the innerHTML of the first of the selected elements, or set the innerHTML of the first of the selected elements if an element is passed in as a string:
 
-Let's say you have this <div> on your page...
+Let's say you have this div on your page...
 ```HTML
 <div class="div-class1">
   <ul>
@@ -210,7 +210,7 @@ Let's say you have this <div> on your page...
 ### on(eventType, callback)
 This function adds an event listener to all selected elements:
 
-Let's say you have this <div> on your page...
+Let's say you have this div on your page...
 ```HTML
 <div class="div-class1">
   <p>Hello, world!</p>
@@ -223,7 +223,7 @@ Let's say you have this <div> on your page...
 ### off(eventType, callback)
 This function removes an event listener to all selected elements:
 
-Let's say you have this <div> on your page...
+Let's say you have this div on your page...
 ```HTML
 <div class="div-class1">
   <p>Hello, world!</p>
@@ -237,7 +237,7 @@ $jControlElement.off("click", () => alert("This event has been activated.")); //
 ### parent(arg)
 This function will return the parent element of all selected elements:
 
-Let's say you have these <div>'s' on your page...
+Let's say you have these div's' on your page...
 ```HTML
 <div class="div-class1">
   <ul class="nested-list1">
