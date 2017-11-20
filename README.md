@@ -4,7 +4,7 @@ jControl is a lightweight library that enables users to manipulate the Document 
 
 # How does jControl work?
 
-In order to begin manipulating the DOM, the user needs to pass a string referring to an HTML element or an actual HTML element into the $l() function. Once the proper argument has been passed into $l(), then all of the functions on its prototype are available to the user.
+In order to begin manipulating the DOM, the user needs to pass a string referring to an HTML element or an actual HTML element into the $l( ) function. Once the proper argument has been passed into $l( ), then all of the functions on its prototype are available to the user.
 
 -----
 
